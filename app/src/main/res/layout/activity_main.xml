@@ -4,6 +4,321 @@
                                                    xmlns:tools="http://schemas.android.com/tools"
                                                    android:layout_width="match_parent"
                                                    android:layout_height="match_parent"
-                                                   tools:context=".MainActivity">
+                                                   tools:context=".MainActivity"
+                                                   android:background="@color/colorPrimaryDark">
+    <!--Poster-->
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200mdp"
+            app:srcCompat="@drawable/aquaman_poster"
+            android:id="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"/>
+    <!--Quality-->
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_20mdp"
+            app:srcCompat="@drawable/ic_4k_fullhd"
+            android:id="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="@+id/textView"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="@+id/ratingBar"
+            android:layout_marginEnd="@dimen/_20mdp"
+            android:layout_marginRight="@dimen/_20mdp"
+            android:tint="@color/gray"
+            android:alpha="0.8"/>
+    <!--Shadow-->
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_90mdp"
+            app:srcCompat="@drawable/shadow"
+            android:id="@+id/imageView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"/>
+    <!--Title-->
+    <TextView
+            android:text="Aquaman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            android:layout_marginTop="@dimen/_10mdp"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="@dimen/_20mdp"
+            android:layout_marginStart="@dimen/_20mdp"
+            android:textSize="@dimen/_20font_mdp"
+            android:textColor="@android:color/background_light"
+            android:fontFamily="sans-serif-medium"/>
+    <!--Watch-->
+    <TextView
+            android:text="Watch Now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:layout_marginTop="@dimen/_10mdp"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            android:background="@drawable/bg_button"
+            android:textSize="@dimen/_12font_mdp"
+            android:paddingTop="@dimen/_5mdp"
+            android:paddingBottom="@dimen/_5mdp"
+            android:paddingLeft="@dimen/_10mdp"
+            android:paddingRight="@dimen/_10mdp"
+            android:textColor="@color/colorPrimary"/>
+    <!--Rating-->
+    <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingBar"
+            app:layout_constraintTop_toTopOf="@+id/textView2"
+            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            android:rating="4"
+            style="?android:attr/ratingBarStyleIndicator"
+            android:scaleX=".7"
+            android:scaleY=".7"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <!--Content-->
+    <TextView
+            android:text="@string/lorem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"
+            android:layout_marginTop="@dimen/_15mdp"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintEnd_toEndOf="@+id/imageView2"
+            android:ellipsize="end"
+            android:textSize="@dimen/_11font_mdp"
+            android:textColor="@color/gray"
+            android:maxLines="6"
+            android:fontFamily="sans-serif-condensed-light"/>
+    <!--Actors-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/textView3"
+            android:layout_marginTop="@dimen/_20mdp"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            app:layout_constraintStart_toStartOf="@+id/textView3"
+            android:id="@+id/constraintLayout">
+        <!--Jason Momoa-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+            <in.nouri.dynamic_sizes.custom_view.RoundedImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_70mdp"
+                    android:src="@drawable/jason_mamoa"
+                    android:layout_margin="@dimen/_5mdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:id="@+id/roundedImageView2"/>
+
+            <TextView
+                    android:text="Jason Momoa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView4"
+                    app:layout_constraintTop_toBottomOf="@+id/roundedImageView2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:textSize="@dimen/_9font_mdp"
+                    android:textColor="@color/gray"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--Line 1-->
+        <androidx.constraintlayout.widget.Guideline
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/guideline"
+                app:layout_constraintGuide_percent="0.25"/>
+        <!--Amber Heard-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                app:layout_constraintStart_toStartOf="@id/guideline"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+            <in.nouri.dynamic_sizes.custom_view.RoundedImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_70mdp"
+                    android:src="@drawable/amber_heard"
+                    android:layout_margin="@dimen/_5mdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:id="@+id/roundedImageView3"/>
+
+            <TextView
+                    android:text="Amber Heard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView5"
+                    app:layout_constraintTop_toBottomOf="@+id/roundedImageView3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:textSize="@dimen/_9font_mdp"
+                    android:textColor="@color/gray"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--Line 2-->
+        <androidx.constraintlayout.widget.Guideline
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/guideline2"
+                app:layout_constraintGuide_percent="0.50"/>
+        <!--William Dafoe-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintStart_toStartOf="@id/guideline2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+            <in.nouri.dynamic_sizes.custom_view.RoundedImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_70mdp"
+                    android:src="@drawable/willem_dafoe_"
+                    android:layout_margin="@dimen/_5mdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:id="@+id/roundedImageView4"/>
+
+            <TextView
+                    android:text="William Dafoe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView6"
+                    app:layout_constraintTop_toBottomOf="@+id/roundedImageView4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:textSize="@dimen/_9font_mdp"
+                    android:textColor="@color/gray"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--Line 3-->
+        <androidx.constraintlayout.widget.Guideline
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/guideline3"
+                app:layout_constraintGuide_percent="0.75"/>
+        <!--Nikole Kidman-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/guideline3"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+            <in.nouri.dynamic_sizes.custom_view.RoundedImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_70mdp"
+                    android:src="@drawable/nikole_kidman"
+                    android:layout_margin="@dimen/_5mdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:id="@+id/roundedImageView5"/>
+
+            <TextView
+                    android:text="Nikole Kidman"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView7"
+                    app:layout_constraintTop_toBottomOf="@+id/roundedImageView5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:textSize="@dimen/_9font_mdp"
+                    android:textColor="@color/gray"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--Studio-->
+    <TextView
+            android:text="Studio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView8"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+            app:layout_constraintLeft_toLeftOf="@+id/constraintLayout"
+            android:layout_marginTop="@dimen/_15mdp"
+            android:textSize="@dimen/_12font_mdp"
+            android:textColor="@android:color/white"
+            android:fontFamily="sans-serif-medium"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout"/>
+    <!--Warner Bros-->
+    <TextView
+            android:text="Warner Bros."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView9"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+            app:layout_constraintLeft_toRightOf="@+id/textView8"
+            android:layout_marginTop="@dimen/_15mdp"
+            android:textSize="@dimen/_12font_mdp"
+            android:textColor="@color/gray"
+            android:fontFamily="sans-serif-condensed-light"
+            android:layout_marginLeft="@dimen/_15mdp"
+            android:layout_marginStart="@dimen/_15mdp"
+            app:layout_constraintStart_toEndOf="@+id/textView8"/>
+    <!--Release-->
+    <TextView
+            android:text="Relase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView10"
+            app:layout_constraintTop_toBottomOf="@+id/textView8"
+            app:layout_constraintLeft_toLeftOf="@+id/constraintLayout"
+            android:layout_marginTop="@dimen/_10mdp"
+            android:textSize="@dimen/_12font_mdp"
+            android:textColor="@android:color/white"
+            android:fontFamily="sans-serif-medium"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout"/>
+    <!--2018-->
+    <TextView
+            android:text="2018"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView11"
+            app:layout_constraintTop_toBottomOf="@+id/textView9"
+            app:layout_constraintLeft_toRightOf="@+id/textView10"
+            android:layout_marginTop="@dimen/_10mdp"
+            android:textSize="@dimen/_12font_mdp"
+            android:textColor="@color/gray"
+            android:fontFamily="sans-serif-condensed-light"
+            android:layout_marginLeft="@dimen/_15mdp"
+            android:layout_marginStart="@dimen/_15mdp"
+            app:layout_constraintStart_toEndOf="@+id/textView8"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
