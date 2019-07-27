@@ -21,3 +21,21 @@ dependencies {
    implementation 'com.github.MrNouri:DynamicSizes:1.0'
 }
  ```
+ 
+## Requirements
+For use this library, you should use **```AndroidX```** instead of **```Support```**
+
+## Usage
+
+| Types | Values |
+|---|:---:|
+| Normal sizes  | mdp |
+| Font size  | font_mdp |
+| Negative sizes  | mines_mdp |
+
+* #### Example
+| Types | Values |
+|---|:---:|
+| Normal sizes  | ```_20mdp``` |
+| Font size  | ```_12font_mdp``` |
+| Negative sizes  | ```mines20mdp``` |
