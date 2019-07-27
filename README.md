@@ -43,7 +43,7 @@ For use this library, you should use **```AndroidX```** instead of **```Support`
 | Font size  | ```_12font_mdp``` |
 | Negative sizes  | ```mines20mdp``` |
 
-* For see more examples and above images source codes, please see this link : activity_main_mdp.xml
+* For see more examples and above images source codes, please see this link : [activity_main_mdp.xml](https://github.com/MrNouri/DynamicSizes/blob/master/app/src/main/res/layout/activity_main_mdp.xml)
 
 ## Thanks
 Special thanks from [Mickael Guillaume](https://www.uplabs.com/guillaumemick) for this great [movie UI](https://www.uplabs.com/posts/movies-e0f9c1ea-a644-4666-857b-10933c4089ca)
