@@ -27,6 +27,7 @@ dependencies {
  
 ## Requirements
 For use this library, you should use **```AndroidX```** instead of **```Support```**
+* If you used **```Support library```**, please see this linke : [DynamicSizes_support](https://github.com/MrNouri/DynamicSizes_support)
 
 ## Usage
 
